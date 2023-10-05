@@ -83,13 +83,23 @@ void problem14() {
     for (int i = 7; i > 0; i--) {
         int x = !!(number & (mask << i));
         printf("%d", x);
-        if (x == 1)ocu++;
+        // #edited
+        // if (x == 1)ocu++;
+        ocu += x;
     }
     printf("\nThere are %d 1's in the number.\n", ocu);
 
 
 }
 
+void xor9() {
+    // a^a = 0
+    // 0^b = 0
+    // switch 2 var
+    //a = a^b
+    //b= a^b
+    //a = a^b
+}
 
 int main() {
     printf("Solved problems: 5, 7, 10, 11, 12, 13, 14 \n");
