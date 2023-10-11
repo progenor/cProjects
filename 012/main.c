@@ -17,6 +17,7 @@ void problemB7(void);
 
 void problemB8(void);
 
+void problem11(void);
 
 int main() {
     printf("Wellcome to the 2nd lab exercise!\nChose from the following problems:\n");
@@ -25,6 +26,7 @@ int main() {
     do {
         printf("Problems:\n");
         printf("\t0 EXIT\n\t3 Problem 3\n\t9 Problem 9\n\t"
+               "11 Problem 11\n\t"
                "12 Problem 12\n\t7 Problem B7\n\t"
                "8 Problem B8\n");
         printf("Chose what problem you want to run: ");
@@ -57,6 +59,11 @@ int main() {
             case 8: {
                 printf("You selected problem B8\n");\
                 problemB8();
+                break;
+            }
+            case 11: {
+                printf("You selected problem 11\n");\
+                problem11();
                 break;
             }
 
@@ -145,6 +152,37 @@ int groupDiscount(int people) {
         return 14;
 }
 
+int groupDiscount2(int people) {
+    if (!people || people < 0) {
+        printf("Invalid number of people: \n", errno);
+        return -1;
+    } else if (people < 5) {
+        return 0;
+    } else if (people >= 5 && people <= 11)
+        return 1;
+    else if (people >= 1 && people <= 19)
+        return 2;
+    else if (people >= 20 && people <= 28)
+        return 3;
+    else if (people >= 29 && people <= 40)
+        return 4;
+    else if (people > 40)
+        return 5;
+}
+
+int studentDiscount(int people) {
+    return 10;
+}
+
+void problem11(void) {
+    int people;
+    printf("Enter the number of people: ");
+    scanf(" %d", &people);
+    printf("The discount repectivly is:\n");
+    printf("\tGroup discount: %d%%\n", groupDiscount(people));
+    printf("\tStudent discount: %d%%\n", studentDiscount(people));
+    printf("\tCompany discount: %d%%\n", groupDiscount2(people));
+}
 
 void problem12(void) {
     int n;
@@ -231,3 +269,4 @@ void problemB8(void) {
     fclose(file);
 
 }
+
