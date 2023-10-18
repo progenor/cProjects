@@ -128,33 +128,17 @@ char *alphabet_war(const char *fight) {
 
 }
 
-double sumOfSeries(const size_t n) {
-    if (n == 0) return 0;
-    double sum = 0;
-    sum = (double) 1 / (double) (4 + 3 * (n - 1));
-
-    return sum + sumOfSeries(n - 1);
-}
-
-/*
- * for this test
-    sum = 1 / (4 + 3 * (n-1));
- *
-        n=5=4=3=2=1=0
-        1/4+15 + 1/4+12 + 1/4+9 +1/4+6 + 1/4+3
-
-*/
 char *series_sum(const size_t n) {
-    printf("n=%zu\n", n);
-    if (n == 0) {
-        //      return calloc(1, 1);
-        return "0.00";
-    } else {
-        double sum = sumOfSeries(n);
-        printf("%.2lf\n", sum);
-        return calloc(1, 1);
+
+    double sum = 0;
+    for (int i = 0; i < n; ++i) {
+        sum += 1.0 / (1 + i * 3);
     }
+    char *result = malloc(10);
+    sprintf(result, "%.2f", sum);
+    return result;
 }
+
 
 void problem8(void) {
     int number;
