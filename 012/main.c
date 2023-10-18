@@ -10,7 +10,6 @@ void problem3();
 
 void problem9(void);
 
-
 void problem12(void);
 
 void problemB7(void);
@@ -18,6 +17,8 @@ void problemB7(void);
 void problemB8(void);
 
 void problem11(void);
+
+void problem1(void);
 
 int main() {
     printf("Wellcome to the 2nd lab exercise!\nChose from the following problems:\n");
@@ -265,8 +266,22 @@ void problemB8(void) {
             break;
         }
     }
-
     fclose(file);
 
+}
+
+void problem1(void) {
+    // print numbers from [a,b] interval
+    int a, b;
+    printf("Enter the interval:a b");
+    scanf(" %d%d", &a, &b);
+    if (a > b) {
+        printf("Invalid interval\n");
+        return;
+    }
+    for (int i = a; i <= b; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
 }
 
