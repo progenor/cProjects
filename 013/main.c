@@ -12,6 +12,12 @@ void problem8(void);
 int main() {
     printf("Wellcome to the 2nd lab exercise!\nChose from the following problems:\n");
     int number;
+    int power[128] = {['w']=-4, ['p']=-3, ['b']=-2, ['s']=-1, ['m']=4, ['q']=3, ['d']=2, ['z']=1}, n = 0;
+//
+//    for (int i = 0; i < 128; i++) {
+//        printf("%d ", power[i]);
+    //    }
+
 
     do {
         printf("Problems:\n");
@@ -33,7 +39,7 @@ int main() {
                 break;
             }
             case 2: {
-                printf("You selected problem 2 Write 2 problems\n");
+                printf("You selected problem 2 Write in a number: \n");
                 size_t n;
                 scanf("%zu", &n);
                 char *result = series_sum(n);
@@ -131,7 +137,7 @@ char *alphabet_war(const char *fight) {
 char *series_sum(const size_t n) {
 
     double sum = 0;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
         sum += 1.0 / (1 + i * 3);
     }
     char *result = malloc(10);
