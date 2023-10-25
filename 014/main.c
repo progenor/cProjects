@@ -14,6 +14,8 @@ void problem4();
 
 void readArray(int *pn, int **pt, char *from);
 
+void problem17();
+
 void printArray(const int *n, int *pt, char *to);
 
 
@@ -57,6 +59,12 @@ int main() {
                 problem16();
                 break;
             }
+            case 17: {
+                printf("You selected problem 17\n");
+                problem17();
+                break;
+            }
+
             default: {
                 printf("Invalid selection\n");
                 break;
@@ -239,4 +247,36 @@ void printArray(const int *n, int *pt, char *to) {
             perror("Error opening file");
         }
     }
+}
+
+void problem17() {
+    int *t, n, sample[] = {23, 98, 0, 67, 0, 0, 24};
+    int choice;
+    printf("Want to enter array or use sample? (sample 1/ enter 0): ");
+    scanf("%d", &choice);
+    if (choice) {
+        t = malloc(sizeof(sample));
+        n = sizeof(sample) / sizeof(sample[0]);
+        for (int i = 0; i < n; ++i) {
+            t[i] = sample[i];
+        }
+    } else {
+        readArray(&n, &t, "CON");
+    }
+
+
+    int x = n;
+    for (int i = 0; i < x; i++) {
+        if (t[i] == 0) {
+            for (int j = i; j < x - 1; j++) {
+                t[j] = t[j + 1];
+            }
+            t[x--] = 0;
+        }
+    }
+
+
+    printArray(&n, t, "CON");
+
+
 }
