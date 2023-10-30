@@ -4,9 +4,8 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <stdbool.h>
+
 #include "arrayFunctions.h"
-#include "arrayFunctions.h"
-#include "asd.h"
 
 int main() {
     printf("Wellcome to the 4th lab exercise!\nChose from the following problems:\n");
@@ -23,10 +22,6 @@ int main() {
             case 0:
                 printf("Exiting...\n");
                 break;
-            case 1: {
-                test(1, "Asd");
-                break;
-            }
 
 
             default: {
@@ -39,6 +34,4 @@ int main() {
 
     return 0;
 }
-
-
 

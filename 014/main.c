@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <malloc.h>
 
+
 void problem15();
 
 void problem16();
@@ -20,7 +21,7 @@ void printArray(const int *n, int *pt, char *to);
 
 
 int main() {
-    printf("Wellcome to the 4th lab exercise!\nChose from the following problems:\n");
+    printf("Welcome to the 4th lab exercise!\nChose from the following problems:\n");
     int number;
     do {
         printf("Problems:\n");
