@@ -61,12 +61,6 @@ build CMakeFiles/project_06.dir/arrayFunctions.c.obj: C_COMPILER__project_06_uns
   OBJECT_DIR = CMakeFiles\project_06.dir
   OBJECT_FILE_DIR = CMakeFiles\project_06.dir
 
-build CMakeFiles/project_06.dir/asd.c.obj: C_COMPILER__project_06_unscanned_Debug C$:/Users/progenor/code/Labs_2023/project_06/asd.c || cmake_object_order_depends_target_project_06
-  DEP_FILE = CMakeFiles\project_06.dir\asd.c.obj.d
-  FLAGS = -g -std=gnu2x -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\project_06.dir
-  OBJECT_FILE_DIR = CMakeFiles\project_06.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target project_06
@@ -75,7 +69,7 @@ build CMakeFiles/project_06.dir/asd.c.obj: C_COMPILER__project_06_unscanned_Debu
 #############################################
 # Link the executable project_06.exe
 
-build project_06.exe: C_EXECUTABLE_LINKER__project_06_Debug CMakeFiles/project_06.dir/main.c.obj CMakeFiles/project_06.dir/arrayFunctions.c.obj CMakeFiles/project_06.dir/asd.c.obj
+build project_06.exe: C_EXECUTABLE_LINKER__project_06_Debug CMakeFiles/project_06.dir/main.c.obj CMakeFiles/project_06.dir/arrayFunctions.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\project_06.dir

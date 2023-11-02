@@ -6,5 +6,4 @@ set(CMAKE_C_STANDARD 23)
 add_executable(project_06 main.c
         arrayFunctions.h
         arrayFunctions.c
-        asd.h
-        asd.c)
+)
